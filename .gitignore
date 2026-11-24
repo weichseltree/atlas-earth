@@ -1,0 +1,8 @@
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.log
+# the template's example, not published here
+results/example/
+tools/make_example.py

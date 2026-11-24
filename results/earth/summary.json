@@ -1,0 +1,36 @@
+{
+ "grid": {
+  "rows": 2048,
+  "cols": 4096,
+  "extent": "lon -180..180, lat 90..-90",
+  "level": 3
+ },
+ "sources": {
+  "land": {
+   "file": "land-polygons-split-3857.zip",
+   "sha256": "e8c4bde2f90a73122656512cc393e07e3e875248121085f17c2c449b4863c689"
+  },
+  "people": {
+   "file": "GHS_POP_E2025_GLOBE_R2023A_4326_30ss_V1_0.zip",
+   "sha256": "cec59a706722493bc670bb53503ce4a2f9b9850aab76dbf9f21fb94746d01195"
+  },
+  "height": {
+   "file": "ETOPO_2022_v1_60s_N90W180_surface.nc",
+   "sha256": "74bbc5c23e85188d93f0beba8116babf69e1a8f160e8dc9f053bf8df01b197b6"
+  }
+ },
+ "height": {
+  "min_m": -10361.235872395833,
+  "max_m": 6406.911539713542,
+  "mean_m": -2391.51369591525
+ },
+ "people": {
+  "total": 8191988536,
+  "max_per_km2": 85121.71376850783,
+  "cells_with_people": 1049944
+ },
+ "land": {
+  "km2": 148469402.31937677,
+  "share_of_sphere": 0.291078874039162
+ }
+}

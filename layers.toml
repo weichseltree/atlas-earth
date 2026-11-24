@@ -1,0 +1,49 @@
+# What this repository publishes. tools/build.py reads this file and results/, and writes dist/.
+# The arrays in results/earth/ are made by tools/prepare.py (see there) from the sources it names.
+
+source  = "weichseltree/atlas-earth"
+title   = "The Earth: land, residents, heights"
+home    = "https://github.com/weichseltree/atlas-earth"
+licence = "Land: ODbL 1.0, a database derived from OpenStreetMap. Residents: CC BY 4.0. Heights: public domain (NOAA, a work of the U.S. Government)."
+cite    = "Land: (c) OpenStreetMap contributors, land polygons of 2026-01-03 via osmdata.openstreetmap.de. Residents: Schiavina et al. (2023), GHS-POP R2023A, epoch 2025, European Commission JRC, doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE. Heights: NOAA NCEI (2022), ETOPO 2022 Global Relief Model, doi:10.25921/fd45-gt74."
+
+[[layer]]
+id     = "land"
+title  = "Land"
+icon   = "map"
+body   = "earth"
+array  = "results/earth/land.npy"         # share of each cell's area that is not ocean
+unit   = "share"
+type   = "uint8"
+min    = 0
+max    = 1
+levels = [0, 3]                           # level 3: about 9.8 km at the equator
+focus  = [0, 12]
+maps   = ["grey"]
+
+[[layer]]
+id     = "people"
+title  = "Residents"
+icon   = "people"
+body   = "earth"
+array  = "results/earth/people.npy"       # residents per km2, 2025
+unit   = "per km2"
+type   = "uint16"
+min    = 0
+levels = [0, 3]
+focus  = [0, 12]
+maps   = ["magma", "viridis"]
+
+[[layer]]
+id     = "height"
+title  = "Height"
+icon   = "relief"
+body   = "earth"
+array  = "results/earth/height.npy"       # mean height above sea level, metres; the sea floor is negative
+unit   = "m"
+type   = "uint16"
+min    = -11000
+max    = 9000
+levels = [0, 3]
+focus  = [0, 12]
+maps   = ["terrain"]
