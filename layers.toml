@@ -20,6 +20,7 @@ max    = 1
 levels = [0, 3]                           # level 3: about 9.8 km at the equator
 focus  = [0, 12]
 maps   = ["grey"]
+role   = "mask"                           # land and sea, and the coastline
 
 [[layer]]
 id     = "people"
@@ -33,6 +34,7 @@ min    = 0
 levels = [0, 3]
 focus  = [0, 12]
 maps   = ["magma", "viridis"]
+role   = "glow"                           # people as light: faint by day, bright at night
 
 [[layer]]
 id     = "height"
@@ -47,3 +49,4 @@ max    = 9000
 levels = [0, 3]
 focus  = [0, 12]
 maps   = ["terrain"]
+role   = "relief"                         # shaded heights on land and depths at sea
